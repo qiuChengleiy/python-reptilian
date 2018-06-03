@@ -23,7 +23,7 @@ print response.read();
 
 * 最终在终端输出如下：  你会看到如下完整的html源码
 
-![]('log.jpg');
+![image](log.jpg)
 
 ##### 方法
 
