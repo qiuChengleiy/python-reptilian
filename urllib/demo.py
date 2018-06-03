@@ -1,36 +1,36 @@
-# import urllib2;
+import urllib2;
  
-# request = urllib2.Request("http://www.baidu.com") 
-# response = urllib2.urlopen(request);
-# print response.read();
+request = urllib2.Request("http://www.baidu.com") 
+response = urllib2.urlopen(request);
+print response.read();
 
 
-# 参数传递 post /  get
+#参数传递 post /  get
 
 
 
-# post
-# import urllib
-# import urllib2
+#post
+import urllib
+import urllib2
  
-# values = {"username":"username","password":"123"};
-# data = urllib.urlencode(values) ;
-# url = "https://passport.baidu.com/account/login?from=http://my.csdn.net/my/baidu";
-# request = urllib2.Request(url,data);
-# response = urllib2.urlopen(request);
-# print response.read();
+values = {"username":"username","password":"123"};
+data = urllib.urlencode(values) ;
+url = "https://passport.csdn.com/account/login?from=http://my.csdn.net/my/baidu";
+request = urllib2.Request(url,data);
+response = urllib2.urlopen(request);
+print response.read();
 
 
-
-# import urllib
-# import urllib2
+#get
+import urllib
+import urllib2
  
-# values={}
-# values['username'] = "1016903103@qq.com"
-# values['password']="XXXX"
-# data = urllib.urlencode(values) 
-# url = "http://passport.csdn.net/account/login"
-# geturl = url + "?"+data
-# request = urllib2.Request(geturl)
-# response = urllib2.urlopen(request)
-# print response.read()
+values={}
+values['username'] = "username"
+values['password']="XXXX"
+data = urllib.urlencode(values) 
+url = "http://passport.csdn.net/account/login"
+geturl = url + "?"+data
+request = urllib2.Request(geturl)
+response = urllib2.urlopen(request)
+print response.read()
