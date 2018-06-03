@@ -1,5 +1,5 @@
 # python-reptilian
-python 爬虫学习笔记 本项目适合有python基础的同学~~ 
+python 爬虫学习笔记 能力有限 高手勿喷~~ 本项目适合有python基础的同学~~   
 
 ### 什么是爬虫
 
