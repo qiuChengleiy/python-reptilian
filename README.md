@@ -94,12 +94,61 @@ urllib2.install_opener(opener)
 
 ```
 
+### 超时设置
 
+```py
+import urllib2
+response = urllib2.urlopen('http://www.baidu.com', timeout=10)
 
+```
 
+### DebugLog
 
+可以通过下面的方法把 Debug Log 打开，这样收发包的内容就会在屏幕上打印出来，方便调试
 
+```py
+import urllib2
+httpHandler = urllib2.HTTPHandler(debuglevel=1)
+httpsHandler = urllib2.HTTPSHandler(debuglevel=1)
+opener = urllib2.build_opener(httpHandler, httpsHandler)
+urllib2.install_opener(opener)
+response = urllib2.urlopen('http://www.baidu.com')
+```
 
+### UrlError
+* 原因可能如下
+	* 网络无连接，即本机无法上网
+	* 连接不到特定的服务器
+	* 服务器不存在
+
+```py
+import urllib2
+ 
+requset = urllib2.Request('http://www.xxxxx.com')
+try:
+    urllib2.urlopen(request)
+except urllib2.URLError, e:
+    print e.reason
+
+```
+
+### 正则表达式
+
+使用： import re
+
+* re.match(pattern, string[, flags])
+
+* re.search(pattern, string[, flags])
+
+* re.split(pattern, string[, maxsplit])
+
+* re.findall(pattern, string[, flags])
+
+* re.finditer(pattern, string[, flags])
+
+* re.sub(pattern, repl, string[, count])
+
+* re.subn(pattern, repl, string[, count])
 
 
 
